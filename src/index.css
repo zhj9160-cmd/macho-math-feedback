@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  background-color: #FAF7F0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* 슬라이더 핸들(thumb) 커스텀 스타일 */
+input[type='range'].slider-input {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type='range'].slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #C9A961;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin-top: -6px;
+}
+
+input[type='range'].slider-input::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #C9A961;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+input[type='range'].slider-input::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 9999px;
+}
