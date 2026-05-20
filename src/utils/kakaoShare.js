@@ -1,5 +1,8 @@
 import { getMonthName } from './dateUtils'
 
+const BASE_URL =
+  import.meta.env.VITE_BASE_URL || 'https://macho-math-feedback.vercel.app'
+
 export function initKakao() {
   if (!window.Kakao) {
     console.warn('[KakaoShare] Kakao SDK가 아직 로드되지 않았습니다.')
@@ -56,16 +59,16 @@ export function shareFeedbackToKakao({ student, feedback, settings, message }) {
         description,
         imageUrl,
         link: {
-          mobileWebUrl: window.location.href,
-          webUrl: window.location.href,
+          mobileWebUrl: BASE_URL,
+          webUrl: BASE_URL,
         },
       },
       buttons: [
         {
           title: '전체 리포트 보기',
           link: {
-            mobileWebUrl: window.location.href,
-            webUrl: window.location.href,
+            mobileWebUrl: BASE_URL,
+            webUrl: BASE_URL,
           },
         },
       ],
